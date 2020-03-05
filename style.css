@@ -1,9 +1,5 @@
-* {
-  font-family: monospace;
-}
 body {
-  color: darkslategrey;
-  margin: 0;
+  font-family: monospace;
 }
 
 .new-class {

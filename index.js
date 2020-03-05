@@ -12,10 +12,10 @@ $specialBox.style.border = "1px solid black";
 $specialBox.style.height = "200px";
 
 // Query Selectors
-// selects the first element matching
+// Selects the first element matching
 const $queryBox = document.querySelector(".box");
 
-// selects all elements matching returns an array (Node List)
+// selects all elements matching returns a Node List (behaves like an array)
 const $allQueryBoxes = document.querySelectorAll(".box");
 
 // console.log("Query selector: ", $queryBox);
@@ -27,17 +27,13 @@ $queryBox.className = "new-class";
 // chaning inner html
 $queryBox.innerHTML = `<ul><li>one</li></ul>`;
 
-// setInterval(() => {
-// 	$queryBox.className = "new-class";
-// }, 3000);
-
 // setting an attribute
 const $link = document.querySelector("a");
-$link.setAttribute("href", "www.google.com");
+$link.setAttribute("href", "https://www.google.com/");
 
 // creating Elements
 const $heading = document.createElement("h4");
-// body
+// selecting the body
 const $body = document.body;
 
 // adding content to the created element
@@ -48,33 +44,29 @@ $specialBox.appendChild($heading);
 $specialBox.removeChild($heading);
 
 // Event Listeners
-const $button = document.querySelector("button");
-
-$button.onclick = function() {
+const $clickMeButton = document.querySelector(".click-me-btn");
+$clickMeButton.onclick = function() {
   console.log("Button clicked!");
 };
-
-$button.addEventListener("click", () => {
+$clickMeButton.addEventListener("click", () => {
   console.log("Event Listener Button clicked!");
 });
 
 // Practice
-
 const $listButton = document.querySelector(".add-to-list");
 const $ulList = document.querySelector(".list");
 
 $listButton.addEventListener("click", () => {
-  console.log("Button clicked");
+  console.log("List Item Added!");
   $ulList.innerHTML += `<li> New Item </li>`;
 });
 
 // targeting input values
-
 const $input = document.querySelector("input");
 const $submitButton = document.getElementById("submit-btn");
 
 $submitButton.addEventListener("click", () => {
+  //to prevent the browsers default of refreshing page
   event.preventDefault();
-  console.log(event);
   console.log("Input value: ", $input.value);
 });
