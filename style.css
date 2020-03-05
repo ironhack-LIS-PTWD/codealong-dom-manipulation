@@ -1,0 +1,29 @@
+* {
+  font-family: monospace;
+}
+body {
+  color: darkslategrey;
+  margin: 0;
+}
+
+.new-class {
+  background-color: aqua;
+}
+
+button {
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+
+.click-me-btn {
+  font-size: 2rem;
+  margin: 40px;
+  font-size: 20px;
+  background-color: darkslategrey;
+  color: white;
+}
+
+.click-me-btn:hover {
+  background-color: darkslategrey;
+  color: white;
+}
